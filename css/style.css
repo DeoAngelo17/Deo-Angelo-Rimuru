@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url(../assets/images/Landscape/1.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -6,78 +6,50 @@ body{
     background-size: cover;
     overflow: hidden;
     animation: change 10s infinite ease-in-out;
+    overflow-y: auto;
 }
 
-@keyframes change{
-    0%
-    {
-        background-image: url(../assets/images/Landscape/StandardCoverSize/1.png);
-    }
-    20%
-    {
-        background-image: url(../assets/images/Landscape/StandardCoverSize/2.png);
-    }
-    40%
-    {
-        background-image: url(../assets/images/Landscape/StandardCoverSize/3.png);
-    }
-    60%
-    {
-        background-image: url(../assets/images/Landscape/StandardCoverSize/4.png);
-    }
-    80%
-    {
-        background-image: url(../assets/images/Landscape/StandardCoverSize/5.png);
-    }
-    100%
-    {
-        background-image: url(../assets/images/Landscape/StandardCoverSize/6.png);
-    }
+@keyframes change {
+    0% { background-image: url(../assets/images/Landscape/StandardCoverSize/1.png); }
+    20% { background-image: url(../assets/images/Landscape/StandardCoverSize/2.png); }
+    40% { background-image: url(../assets/images/Landscape/StandardCoverSize/3.png); }
+    60% { background-image: url(../assets/images/Landscape/StandardCoverSize/4.png); }
+    80% { background-image: url(../assets/images/Landscape/StandardCoverSize/5.png); }
+    100% { background-image: url(../assets/images/Landscape/StandardCoverSize/6.png); }
 }
 
-
-
-h1{
+h1 {
     color: white;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     font-family: "Sour Gummy", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  width: 940px;
+    font-weight: 700;
+    font-size: 2em; /* Use relative units */
+    text-align: center; /* Center the heading */
 }
-    
-
 
 #list {
-    background-color: rgb(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 1%;
-    padding-right: 1px;
-    margin-right: 600pt;
+    margin: 0 auto; /* Center the list */
+    max-width: 940px; /* Set a maximum width */
 }
+
 /*--------------------Download & Info Button------------------------*/
-.btn{
+.btn {
     color: white;
     background-color: rgb(81, 149, 209);
-    text-decoration-line: none;
+    text-decoration: none;
     padding: 15px;
     border-radius: 30px;
-    position: absolute;
-    top: 16pt;
-    left: 950pt;
-
-    font-family: "Sour Gummy", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+    display: inline-block; /* Change to inline-block for better spacing */
+    margin: 10px; /* Add margin for spacing */
+    text-align: center; /* Center text */
 }
 
 .moreinfo {
     display: inline-block;
-    position:absolute;
-    top: 16pt;
-    left: 1100pt;
+    position: relative; /* Change to relative */
+    margin: 10px; /* Add spacing */
 }
 
 .image {
@@ -103,61 +75,67 @@ h1{
     transition: opacity 0.3s ease;
     z-index: 1;
 }
+
 /*----------------PAGE ORDER BUTTONS section--------------------------*/
-#pageorder{
-    background-color: rgb(255, 255, 255, 0.3);
-    height: 100pt;
+#pageorder {
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
-    padding-left: 20pt;
-    padding-top: 5pt;
-    
+    margin: 10px auto; /* Center the container */
+    max-width: 940px; /* Set a maximum width */
 }
 
-h2{
+h2 {
     font-family: "Happy Monkey", serif;
-    font-size: large;
+    font-size: 1.5em; /* Use relative units */
     font-weight: 900;
-    font-style: normal;
-    width: 150px;
-    margin-top: 10px;
+    margin: 10px 0; /* Add margin for spacing */
+    text-align: center; /* Center the heading */
 }
 
-#pageorder > .bt1, .bt2, .bt3, .bt4, .bt5, .bt6, .bt7 {
+#pageorder .bt1, #pageorder .bt2, #pageorder .bt3, #pageorder .bt4, #pageorder .bt5, #pageorder .bt6, #pageorder .bt7,
+#pageorder2 .bt8, #pageorder2 .bt9, #pageorder2 .bt10, #pageorder2 .bt11, #pageorder2 .bt12, #pageorder2 .bt13 {
     background-color: rgb(83, 148, 206);
     text-decoration: none;
     padding: 15px;
     border-radius: 30px;
-    position: relative;
-    top: -20px;
-    left: 150pt;
-    margin: 10px;
-
+    display: inline-block; /* Change to inline-block for better spacing */
+    margin: 5px; /* Add margin for spacing */
     color: white;
     font-family: "Sour Gummy", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
 }
-#pageorder2 > .bt8, .bt9, .bt10, .bt11, .bt12, .bt13{
-    background-color: rgb(83, 148, 206);
-    text-decoration: none;
-    padding: 15px;
-    border-radius: 30px;
-    position: relative;
-    top: 20px;
-    left: 30pt;
-    margin: 10px;
 
-    color: white;
-    font-family: "Sour Gummy", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
 /*--------------------footer-------------------------------*/
-footer{
+footer {
     text-align: center;
 }
-footer > p{
+
+footer > p {
     color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    #list {
+        padding: 2%; /* Increase padding on smaller screens */
+    }
+
+    .btn, .moreinfo {
+        width: 90%; /* Make buttons take full width */
+        margin: 10px auto; /* Center the buttons */
+    }
+
+    #pageorder, #pageorder2 {
+        display: flex;
+        flex-wrap: wrap; /* Allow buttons to wrap */
+        justify-content: center; /* Center the buttons */
+    }
+
+    #pageorder .bt1, #pageorder .bt2, #pageorder .bt3, #pageorder .bt4, #pageorder .bt5, #pageorder .bt6, #pageorder .bt7,
+    #pageorder2 .bt8, #pageorder2 .bt9, #pageorder2 .bt10, #pageorder2 .bt11, #pageorder2 .bt12, #pageorder2 .bt13 {
+        width: calc(45% - 10px); /* Adjust button width for smaller screens */
+    }
 }
